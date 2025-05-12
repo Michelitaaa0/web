@@ -1,70 +1,248 @@
-/* Reset básico */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Fuente y color general */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #111;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem; /* Se aumentó el padding para dar más espacio */
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem; /* Aumentado el tamaño del título */
+  color: #2c3e90;
 }
 
 nav ul {
-    list-style: none;
+  display: flex;
+  list-style: none;
+  gap: 2rem; /* Aumenté el espacio entre los enlaces */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
+/* Hero */
 .hero {
-    background: #3498db;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+  text-align: center;
+  background-color: white;
+  padding: 5rem 2rem; /* Aumenté el padding para mayor espacio */
+  border-bottom: 2px solid #eee;
+  position: relative;
 }
 
-section {
-    padding: 20px;
-    margin: 20px 0;
+.hero h1.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 7rem; /* Aumenté el tamaño de h1 */
+  color: #2c3e90;
 }
 
+.hero h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem; /* Aumenté el tamaño de h2 */
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  width: 250px;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+.asterisk {
+  font-size: 5rem; /* Aumenté el tamaño del asterisco */
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #2c3e90;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Secciones */
+.section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem; /* Aumenté el tamaño del título en secciones */
+  font-family: 'Bebas Neue', sans-serif;
+  color: #2c3e90;
+  margin-bottom: 2rem;
+}
+
+/* Sección de Proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* Aumenté el espacio entre las tarjetas */
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+/* Habilidades */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem; /* Aumenté el tamaño de la lista */
+}
+
+/* Redes sociales */
+.socials {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Aumenté el espacio entre los enlaces sociales */
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
-/* Estilos para los proyectos */
-.project {
-    background: white;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 15px;
+.about-img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.project h3 {
-    margin-bottom: 10px;
+.about-text {
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
-.project a {
-    text-decoration: none;
-    color: #3498db;
+@media(min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .about-text {
+    max-width: 60%;
+  }
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.02);
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-item h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #2c3e90;
+  margin-bottom: 0.5rem;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.skill-card {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2c3e90;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+.contact-info {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 2;
+}
+
+.contact-info a {
+  color: #2c3e90;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
