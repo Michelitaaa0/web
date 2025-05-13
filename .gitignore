@@ -1,0 +1,8 @@
+# Archivos del sistema
+.DS_Store
+
+# Excluir videos
+/assets/videos/*
+
+# Dependencias de Node.js (si usas Node.js)
+node_modules/
