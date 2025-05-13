@@ -4,7 +4,7 @@
 Este es un proyecto de prueba para aprender Git, GitHub y Visual Studio Code.  
 
 ## Demo en vivo  
-Puedes ver la demo en vivo aquí: [https://tu-usuario.github.io/tu-proyecto](https://tu-usuario.github.io/tu-proyecto)  
+Puedes ver la demo en vivo aquí: [https://michelitaaa0.github.io/web/]
 
 ## Instalación  
 1. Clonar el repositorio  
